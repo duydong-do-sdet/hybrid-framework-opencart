@@ -1,12 +1,12 @@
-package pageObjects;
+package page.objects.common;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 
-public class HomePageObject extends BasePage {
+public class OpenCartPage extends BasePage {
     private WebDriver driver;
 
-    public HomePageObject(WebDriver driver) {
+    public OpenCartPage(WebDriver driver) {
         this.driver = driver;
     }
 

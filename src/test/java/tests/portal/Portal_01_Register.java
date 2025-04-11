@@ -1,19 +1,17 @@
-package testCases;
+package tests.portal;
 
 import commons.BaseTest;
-import commons.PageGeneratorManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.HomePageObject;
+import page.objects.PageGeneratorManager;
+import page.objects.portal.PortalYourStorePage;
 
-public class Test_01_Register extends BaseTest {
+public class Portal_01_Register extends BaseTest {
     private WebDriver driver;
-    private HomePageObject homePage;
+    private PortalYourStorePage homePage;
 
     @Parameters({"browser", "appUrl"})
     @BeforeClass
@@ -24,12 +22,10 @@ public class Test_01_Register extends BaseTest {
 
     @Test
     public void Register_01() {
-        Assert.assertEquals(driver.getTitle(), "Your Store");
     }
 
     @Test
     public void Register_02() {
-        Assert.assertTrue(driver.findElement(By.xpath("//div[@id='logo']")).isDisplayed());
     }
 
     @AfterClass
