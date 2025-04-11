@@ -1,4 +1,4 @@
-package page.uis.portal;
+package page.ui.portal;
 
 public class PortalYourStoreUI {
 }

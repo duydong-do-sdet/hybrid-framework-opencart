@@ -1,7 +1,7 @@
-package page.objects.portal;
+package page.object.portal;
 
 import org.openqa.selenium.WebDriver;
-import page.objects.common.PortalPage;
+import page.object.common.PortalPage;
 
 public class PortalYourStorePage extends PortalPage {
     private WebDriver driver;

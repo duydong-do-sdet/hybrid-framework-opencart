@@ -1,6 +1,6 @@
-package page.objects.common;
+package page.object.common;
 
-import commons.BasePage;
+import base.BasePage;
 import org.openqa.selenium.WebDriver;
 
 public class OpenCartPage extends BasePage {

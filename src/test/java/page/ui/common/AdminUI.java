@@ -1,4 +1,4 @@
-package page.uis.common;
+package page.ui.common;
 
 public class AdminUI {
 }

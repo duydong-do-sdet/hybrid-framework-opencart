@@ -1,7 +1,7 @@
-package page.objects;
+package page.object;
 
 import org.openqa.selenium.WebDriver;
-import page.objects.portal.PortalYourStorePage;
+import page.object.portal.PortalYourStorePage;
 
 public class PageGeneratorManager {
 
