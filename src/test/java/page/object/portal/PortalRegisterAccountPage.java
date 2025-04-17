@@ -109,4 +109,15 @@ public class PortalRegisterAccountPage extends PortalPage {
         return getElementText(driver, PortalRegisterAccountUI.REGISTER_SUCCESS_MESSAGE);
     }
 
+    public void registerNewUserAccount(String firstName, String lastName, String emailAddress, String telephoneNumber, String password) {
+        sendKeysToFirstNameTextbox(firstName);
+        sendKeysToLastNameTextbox(lastName);
+        sendKeysToEmailTextbox(emailAddress);
+        sendKeysToTelephoneTextbox(telephoneNumber);
+        sendKeysToPasswordTextbox(password);
+        sendKeysToConfirmPasswordTextbox(password);
+        checkPrivacyPolicyCheckbox();
+        clickContinueButton();
+    }
+
 }

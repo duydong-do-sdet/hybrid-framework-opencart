@@ -22,6 +22,8 @@ public class PortalPage extends OpenCartPage {
                 return PageGeneratorManager.getPortalRegisterAccountPage(driver);
             case "Logout":
                 return PageGeneratorManager.getPortalAccountLogoutPage(driver);
+            case "Login":
+                return PageGeneratorManager.getPortalAccountLoginPage(driver);
             default:
                 throw new RuntimeException("Invalid header option: '" + optionValue + "'");
         }

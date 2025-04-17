@@ -117,7 +117,7 @@ public class Portal_01_Register extends BaseTest {
 
         registerAccountPage.clickContinueButton();
 
-        Assert.assertEquals(registerAccountPage.getRegisterWarningMessage(), "Warning: E-Mail Address is already registered");
+        Assert.assertEquals(registerAccountPage.getRegisterWarningMessage(), "Warning: E-Mail Address is already registered!");
     }
 
     @Test
@@ -140,11 +140,11 @@ public class Portal_01_Register extends BaseTest {
 
         registerAccountPage.clickContinueButton();
 
-        Assert.assertEquals(registerAccountPage.getPasswordErrorMessage(), "Password must be between 4 and 20 characters");
+        Assert.assertEquals(registerAccountPage.getPasswordErrorMessage(), "Password must be between 4 and 20 characters!");
     }
 
     @Test
-    public void Register_05_Incorrect_Confirm_Password() {
+    public void Register_06_Incorrect_Confirm_Password() {
         registerAccountPage.selectOptionInMyAccountHeaderDropdown("Register");
 
         registerAccountPage.sendKeysToFirstNameTextbox(firstName);
@@ -163,7 +163,7 @@ public class Portal_01_Register extends BaseTest {
 
         registerAccountPage.clickContinueButton();
 
-        Assert.assertEquals(registerAccountPage.getConfirmPasswordErrorMessage(), "Password confirmation does not match password");
+        Assert.assertEquals(registerAccountPage.getConfirmPasswordErrorMessage(), "Password confirmation does not match password!");
     }
 
     @AfterClass

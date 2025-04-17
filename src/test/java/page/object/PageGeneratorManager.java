@@ -1,9 +1,7 @@
 package page.object;
 
 import org.openqa.selenium.WebDriver;
-import page.object.portal.PortalAccountLogoutPage;
-import page.object.portal.PortalRegisterAccountPage;
-import page.object.portal.PortalYourStorePage;
+import page.object.portal.*;
 
 public class PageGeneratorManager {
 
@@ -17,6 +15,13 @@ public class PageGeneratorManager {
 
     public static PortalAccountLogoutPage getPortalAccountLogoutPage(WebDriver driver) {
         return new PortalAccountLogoutPage(driver);
+    }
+
+    public static PortalAccountLoginPage getPortalAccountLoginPage(WebDriver driver) {
+        return new PortalAccountLoginPage(driver);
+    }
+    public static PortalMyAccountPage getPortalMyAccountPage(WebDriver driver) {
+        return new PortalMyAccountPage(driver);
     }
 
 }

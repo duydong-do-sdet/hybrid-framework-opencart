@@ -11,7 +11,7 @@
     <test name="FirefoxTest">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="tests.portal.Portal_01_Register"/>
+            <class name="tests.portal.Portal_02_Login"/>
         </classes>
     </test>
 
