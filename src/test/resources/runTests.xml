@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="All Test Suite" parallel="tests">
 
     <listeners>
         <listener class-name="utilities.AllureReportListener"/>
@@ -10,6 +10,21 @@
 
     <test name="FirefoxTest">
         <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="tests.portal.Portal_01_Register"/>
+            <class name="tests.portal.Portal_02_Login"/>
+        </classes>
+    </test>
+
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.portal.Portal_02_Login"/>
+        </classes>
+    </test>
+
+    <test name="EdgeTest">
+        <parameter name="browser" value="edge"/>
         <classes>
             <class name="tests.portal.Portal_02_Login"/>
         </classes>

@@ -18,6 +18,7 @@ public class Portal_02_Login extends BaseTest {
     private PortalAccountLoginPage accountLoginPage;
     private PortalMyAccountPage myAccountPage;
     private String firstName, lastName, emailAddress, telephoneNumber, password;
+    private String invalidEmail, notFoundEmail, incorrectPass;
 
     @Parameters({"browser", "appUrl"})
     @BeforeClass
@@ -30,6 +31,10 @@ public class Portal_02_Login extends BaseTest {
         emailAddress = "dong.sdet" + getRandomNumber() + "@gmail.com";
         telephoneNumber = "0789123456";
         password = "SeJava4@";
+
+        invalidEmail = "dong.sdet" + getRandomNumber() + "@gmail@com";
+        notFoundEmail = "dong.demo" + getRandomNumber() + "@gmail@com";
+        incorrectPass = "JavaSe4@";
 
         registerAccountPage = (PortalRegisterAccountPage) yourStorePage.selectOptionInMyAccountHeaderDropdown("Register");
         registerAccountPage.registerNewUserAccount(firstName, lastName, emailAddress, telephoneNumber, password);
@@ -49,7 +54,7 @@ public class Portal_02_Login extends BaseTest {
     public void Register_02_Invalid_Email() {
         accountLoginPage.selectOptionInMyAccountHeaderDropdown("Login");
 
-        accountLoginPage.sendKeysToEmailTextbox("dong.sdet@gmail@com");
+        accountLoginPage.sendKeysToEmailTextbox(invalidEmail);
 
         accountLoginPage.sendKeysToPasswordTextbox(password);
 
@@ -62,7 +67,7 @@ public class Portal_02_Login extends BaseTest {
     public void Register_03_Not_Found_Email() {
         accountLoginPage.selectOptionInMyAccountHeaderDropdown("Login");
 
-        accountLoginPage.sendKeysToEmailTextbox("demo.acc@gmail.com");
+        accountLoginPage.sendKeysToEmailTextbox(notFoundEmail);
 
         accountLoginPage.sendKeysToPasswordTextbox(password);
 
@@ -90,7 +95,7 @@ public class Portal_02_Login extends BaseTest {
 
         accountLoginPage.sendKeysToEmailTextbox(emailAddress);
 
-        accountLoginPage.sendKeysToPasswordTextbox("JavaSe4@");
+        accountLoginPage.sendKeysToPasswordTextbox(incorrectPass);
 
         accountLoginPage.clickLoginButton();
 
@@ -112,9 +117,9 @@ public class Portal_02_Login extends BaseTest {
         accountLogoutPage = (PortalAccountLogoutPage) myAccountPage.selectOptionInMyAccountHeaderDropdown("Logout");
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void afterClass() {
-        driver.quit();
+        quitDriver();
     }
 
 }

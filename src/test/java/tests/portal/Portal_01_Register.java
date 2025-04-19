@@ -166,9 +166,9 @@ public class Portal_01_Register extends BaseTest {
         Assert.assertEquals(registerAccountPage.getConfirmPasswordErrorMessage(), "Password confirmation does not match password!");
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void afterClass() {
-        driver.quit();
+        quitDriver();
     }
 
 }
