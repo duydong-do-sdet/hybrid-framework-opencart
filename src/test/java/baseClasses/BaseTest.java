@@ -6,6 +6,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
+import java.util.Random;
 
 public class BaseTest {
     private WebDriver driver;
@@ -40,6 +41,10 @@ public class BaseTest {
                 driver = null;
             }
         }
+    }
+
+    protected int getRandomNumber() {
+        return new Random().nextInt(10000);
     }
 
 }
