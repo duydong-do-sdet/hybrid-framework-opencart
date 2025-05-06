@@ -1,15 +1,14 @@
 package pageObjects;
 
-import baseClasses.BasePage;
-import baseClasses.GlobalConstants;
-import baseClasses.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
+import pageObjects.commons.OpenCartPageObject;
 import pageUIs.RegisterAccountPageUI;
 
-public class RegisterAccountPageObject extends BasePage {
+public class RegisterAccountPageObject extends OpenCartPageObject {
     private WebDriver driver;
 
     public RegisterAccountPageObject(WebDriver driver) {
+        super(driver);
         this.driver = driver;
     }
 
@@ -96,14 +95,6 @@ public class RegisterAccountPageObject extends BasePage {
     public String getRegisterSuccessContentText() {
         waitForElementToBeVisible(driver, RegisterAccountPageUI.REGISTER_SUCCESS_CONTENT_MESSAGE);
         return getElementText(driver, RegisterAccountPageUI.REGISTER_SUCCESS_CONTENT_MESSAGE);
-    }
-
-    public AccountLogoutPageObject selectLogoutInMyAccountHeaderDropdown() {
-        waitForElementToBeClickable(driver, RegisterAccountPageUI.MY_ACCOUNT_HEADER_DROPDOWN);
-        clickElement(driver, RegisterAccountPageUI.MY_ACCOUNT_HEADER_DROPDOWN);
-        sleepForSeconds(GlobalConstants.ONE_SECOND);
-        clickElement(driver, RegisterAccountPageUI.LOGOUT_OPTION);
-        return PageGeneratorManager.getAccountLogoutPage(driver);
     }
 
 }

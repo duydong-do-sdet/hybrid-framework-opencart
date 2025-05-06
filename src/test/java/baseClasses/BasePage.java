@@ -534,6 +534,18 @@ public class BasePage {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
     }
 
+    protected void selectOptionInCustomDropdown(WebDriver driver, String dropdownXPath, String allOptionsXPath, String expectedOption) {
+        clickElement(driver, dropdownXPath);
+        sleepForSeconds(oneSecond);
+        List<WebElement> allOptions = initExplicitWait(driver).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(allOptionsXPath)));
+        for (WebElement option : allOptions) {
+            if (option.getText().trim().equals(expectedOption)) {
+                option.click();
+                break;
+            }
+        }
+    }
+
     // Common constants
 
     private final long longTimeout = GlobalConstants.LONG_TIMEOUT;

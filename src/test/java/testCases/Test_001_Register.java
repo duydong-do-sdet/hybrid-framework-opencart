@@ -34,7 +34,7 @@ public class Test_001_Register extends BaseTest {
 
     @Test
     public void Register_001_Empty_Data() {
-        registerAccountPage = yourStorePage.selectRegisterInMyAccountHeaderDropdown();
+        registerAccountPage = (RegisterAccountPageObject) yourStorePage.selectMyAccountHeaderDropdownWithOption("Register");
 
         registerAccountPage.clickContinueButton();
 
@@ -53,7 +53,7 @@ public class Test_001_Register extends BaseTest {
 
     @Test
     public void Register_002_Invalid_Email() {
-        registerAccountPage = yourStorePage.selectRegisterInMyAccountHeaderDropdown();
+        registerAccountPage = (RegisterAccountPageObject) yourStorePage.selectMyAccountHeaderDropdownWithOption("Register");
 
         registerAccountPage.sendKeysToFirstNameTextbox(firstName);
 
@@ -76,7 +76,7 @@ public class Test_001_Register extends BaseTest {
 
     @Test
     public void Register_003_Invalid_Password() {
-        registerAccountPage = yourStorePage.selectRegisterInMyAccountHeaderDropdown();
+        registerAccountPage = (RegisterAccountPageObject) yourStorePage.selectMyAccountHeaderDropdownWithOption("Register");
 
         registerAccountPage.sendKeysToFirstNameTextbox(firstName);
 
@@ -99,7 +99,7 @@ public class Test_001_Register extends BaseTest {
 
     @Test
     public void Register_004_Incorrect_Confirm_Password() {
-        registerAccountPage = yourStorePage.selectRegisterInMyAccountHeaderDropdown();
+        registerAccountPage = (RegisterAccountPageObject) yourStorePage.selectMyAccountHeaderDropdownWithOption("Register");
 
         registerAccountPage.sendKeysToFirstNameTextbox(firstName);
 
@@ -122,7 +122,7 @@ public class Test_001_Register extends BaseTest {
 
     @Test
     public void Register_005_Valid_Data() {
-        registerAccountPage = yourStorePage.selectRegisterInMyAccountHeaderDropdown();
+        registerAccountPage = (RegisterAccountPageObject) yourStorePage.selectMyAccountHeaderDropdownWithOption("Register");
 
         registerAccountPage.sendKeysToFirstNameTextbox(firstName);
 
@@ -142,14 +142,14 @@ public class Test_001_Register extends BaseTest {
 
         Assert.assertEquals(registerAccountPage.getRegisterSuccessContentText(), "Your Account Has Been Created!");
 
-        accountLogoutPage = registerAccountPage.selectLogoutInMyAccountHeaderDropdown();
+        accountLogoutPage = (AccountLogoutPageObject) registerAccountPage.selectMyAccountHeaderDropdownWithOption("Logout");
 
         Assert.assertEquals(accountLogoutPage.getAccountLogoutContentText(), "Account Logout");
     }
 
     @Test
     public void Register_006_Existing_Email() {
-        registerAccountPage = accountLogoutPage.selectRegisterInMyAccountHeaderDropdown();
+        registerAccountPage = (RegisterAccountPageObject) accountLogoutPage.selectMyAccountHeaderDropdownWithOption("Register");
 
         registerAccountPage.sendKeysToFirstNameTextbox(firstName);
 

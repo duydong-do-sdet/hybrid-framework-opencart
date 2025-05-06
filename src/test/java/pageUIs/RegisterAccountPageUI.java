@@ -2,9 +2,6 @@ package pageUIs;
 
 public class RegisterAccountPageUI {
 
-    public static final String MY_ACCOUNT_HEADER_DROPDOWN = "//nav[@id='top']//li[@class='dropdown']//span[text()='My Account']";
-    public static final String LOGOUT_OPTION = "//nav[@id='top']//a[@title='My Account']/parent::li/ul//a[text()='Logout']";
-
     public static final String FIRSTNAME_TEXTBOX = "//input[@id='input-firstname']";
     public static final String LASTNAME_TEXTBOX = "//input[@id='input-lastname']";
     public static final String EMAIL_TEXTBOX = "//input[@id='input-email']";

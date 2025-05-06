@@ -1,24 +1,14 @@
 package pageObjects;
 
-import baseClasses.BasePage;
-import baseClasses.GlobalConstants;
-import baseClasses.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
-import pageUIs.YourStorePageUI;
+import pageObjects.commons.OpenCartPageObject;
 
-public class YourStorePageObject extends BasePage {
+public class YourStorePageObject extends OpenCartPageObject {
     private WebDriver driver;
 
     public YourStorePageObject(WebDriver driver) {
+        super(driver);
         this.driver = driver;
-    }
-
-    public RegisterAccountPageObject selectRegisterInMyAccountHeaderDropdown() {
-        waitForElementToBeClickable(driver, YourStorePageUI.MY_ACCOUNT_HEADER_DROPDOWN);
-        clickElement(driver, YourStorePageUI.MY_ACCOUNT_HEADER_DROPDOWN);
-        sleepForSeconds(GlobalConstants.ONE_SECOND);
-        clickElement(driver, YourStorePageUI.REGISTER_OPTION);
-        return PageGeneratorManager.getRegisterAccountPage(driver);
     }
 
 }
