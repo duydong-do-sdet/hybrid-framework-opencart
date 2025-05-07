@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="OpenCart" parallel="tests">
+<suite name="OpenCart">
+
+    <listeners>
+        <listener class-name="utilities.AllureReportListener"/>
+    </listeners>
 
     <parameter name="appUrl" value="http://localhost/opencart/upload/"/>
 
