@@ -1,4 +1,4 @@
-package pageUIs.commons;
+package interfaces.commons;
 
 public class OpenCartPageUI {
 

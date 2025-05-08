@@ -1,10 +1,10 @@
-package pageObjects.commons;
+package pageobjects.commons;
 
-import baseClasses.BasePage;
-import baseClasses.PageGeneratorManager;
+import commons.BasePage;
+import commons.PageGeneratorManager;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
-import pageUIs.commons.OpenCartPageUI;
+import interfaces.commons.OpenCartPageUI;
 
 public class OpenCartPageObject extends BasePage {
     private WebDriver driver;

@@ -1,7 +1,7 @@
 package utilities;
 
-import baseClasses.BaseTest;
-import baseClasses.GlobalConstants;
+import commons.BaseTest;
+import commons.GlobalConstants;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

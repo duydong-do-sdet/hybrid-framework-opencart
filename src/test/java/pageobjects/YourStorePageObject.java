@@ -1,7 +1,7 @@
-package pageObjects;
+package pageobjects;
 
 import org.openqa.selenium.WebDriver;
-import pageObjects.commons.OpenCartPageObject;
+import pageobjects.commons.OpenCartPageObject;
 
 public class YourStorePageObject extends OpenCartPageObject {
     private WebDriver driver;

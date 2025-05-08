@@ -1,9 +1,9 @@
-package pageObjects;
+package pageobjects;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
-import pageObjects.commons.OpenCartPageObject;
-import pageUIs.MyAccountPageUI;
+import pageobjects.commons.OpenCartPageObject;
+import interfaces.MyAccountPageUI;
 
 public class MyAccountPageObject extends OpenCartPageObject {
     private WebDriver driver;

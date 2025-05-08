@@ -1,16 +1,16 @@
-package testCases;
+package testcases;
 
-import baseClasses.BaseTest;
-import baseClasses.PageGeneratorManager;
+import commons.BaseTest;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.AccountLogoutPageObject;
-import pageObjects.RegisterAccountPageObject;
-import pageObjects.YourStorePageObject;
+import pageobjects.AccountLogoutPageObject;
+import pageobjects.RegisterAccountPageObject;
+import pageobjects.YourStorePageObject;
 
 public class Test_001_Register extends BaseTest {
     private WebDriver driver;
