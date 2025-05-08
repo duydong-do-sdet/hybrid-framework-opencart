@@ -36,6 +36,18 @@ public class Test_001_Register extends BaseTest {
     public void Register_001_Empty_Data() {
         registerAccountPage = (RegisterAccountPageObject) yourStorePage.selectMyAccountHeaderDropdownWithOption("Register");
 
+        registerAccountPage.sendKeysToFirstNameTextbox("");
+
+        registerAccountPage.sendKeysToLastNameTextbox("");
+
+        registerAccountPage.sendKeysToEmailTextbox("");
+
+        registerAccountPage.sendKeysToTelephoneTextbox("");
+
+        registerAccountPage.sendKeysToPasswordTextbox("");
+
+        registerAccountPage.sendKeysToConfirmPasswordTextbox("");
+
         registerAccountPage.clickContinueButton();
 
         Assert.assertEquals(registerAccountPage.getFirstNameErrorMessage(), "First Name must be between 1 and 32 characters!");

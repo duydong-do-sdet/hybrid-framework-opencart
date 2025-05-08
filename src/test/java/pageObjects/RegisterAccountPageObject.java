@@ -115,4 +115,16 @@ public class RegisterAccountPageObject extends OpenCartPageObject {
         return getElementText(driver, RegisterAccountPageUI.REGISTER_SUCCESS_CONTENT_MESSAGE);
     }
 
+    @Step("Register by 'FirstName: {0}' 'LastName: {1}' 'Email: {2}' 'Telephone: {3}' 'Password: {4}'")
+    public void registerNewUserAccount(String firstName, String lastName, String emailAddress, String telephone, String password) {
+        sendKeysToFirstNameTextbox(firstName);
+        sendKeysToLastNameTextbox(lastName);
+        sendKeysToEmailTextbox(emailAddress);
+        sendKeysToTelephoneTextbox(telephone);
+        sendKeysToPasswordTextbox(password);
+        sendKeysToConfirmPasswordTextbox(password);
+        checkPrivacyPolicyCheckbox();
+        clickContinueButton();
+    }
+
 }

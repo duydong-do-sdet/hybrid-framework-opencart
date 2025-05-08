@@ -58,7 +58,7 @@ public class BaseTest {
         deleteAllFilesInFolder("allure-results");
     }
 
-    public void deleteAllFilesInFolder(String folderName) {
+    private void deleteAllFilesInFolder(String folderName) {
         try {
             String folderPath = GlobalConstants.PROJECT_BASE_PATH + folderName;
             File folder = new File(folderPath);

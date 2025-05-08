@@ -12,21 +12,22 @@
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="testCases.Test_001_Register"/>
+            <class name="testCases.Test_002_Login"/>
         </classes>
     </test>
 
-    <test name="ChromeTest">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="testCases.Test_001_Register"/>
-        </classes>
-    </test>
+    <!--  <test name="ChromeTest">
+         <parameter name="browser" value="chrome"/>
+         <classes>
+             <class name="testCases.Test_002_Login"/>
+         </classes>
+     </test>
 
-    <test name="EdgeTest">
-        <parameter name="browser" value="edge"/>
-        <classes>
-            <class name="testCases.Test_001_Register"/>
-        </classes>
-    </test>
+     <test name="EdgeTest">
+         <parameter name="browser" value="edge"/>
+         <classes>
+             <class name="testCases.Test_002_Login"/>
+         </classes>
+     </test>-->
 
 </suite>

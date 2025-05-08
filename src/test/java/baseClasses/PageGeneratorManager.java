@@ -1,9 +1,7 @@
 package baseClasses;
 
 import org.openqa.selenium.WebDriver;
-import pageObjects.AccountLogoutPageObject;
-import pageObjects.RegisterAccountPageObject;
-import pageObjects.YourStorePageObject;
+import pageObjects.*;
 
 public class PageGeneratorManager {
 
@@ -17,6 +15,14 @@ public class PageGeneratorManager {
 
     public static AccountLogoutPageObject getAccountLogoutPage(WebDriver driver) {
         return new AccountLogoutPageObject(driver);
+    }
+
+    public static AccountLoginPageObject getAccountLoginPage(WebDriver driver) {
+        return new AccountLoginPageObject(driver);
+    }
+
+    public static MyAccountPageObject getMyAccountPage(WebDriver driver) {
+        return new MyAccountPageObject(driver);
     }
 
 }

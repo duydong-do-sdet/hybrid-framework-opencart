@@ -22,6 +22,8 @@ public class OpenCartPageObject extends BasePage {
                 return PageGeneratorManager.getRegisterAccountPage(driver);
             case "Logout":
                 return PageGeneratorManager.getAccountLogoutPage(driver);
+            case "Login":
+                return PageGeneratorManager.getAccountLoginPage(driver);
             default:
                 throw new RuntimeException("Invalid header option: '" + optionValue + "'");
         }
