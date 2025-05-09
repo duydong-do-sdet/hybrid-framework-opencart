@@ -2,6 +2,10 @@ package commons;
 
 import org.openqa.selenium.WebDriver;
 import pageobjects.*;
+import pageobjects.account.AccountLoginPageObject;
+import pageobjects.account.AccountLogoutPageObject;
+import pageobjects.account.MyAccountPageObject;
+import pageobjects.account.RegisterAccountPageObject;
 
 public class PageGeneratorManager {
 

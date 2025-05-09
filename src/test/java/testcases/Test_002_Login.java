@@ -9,6 +9,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageobjects.*;
+import pageobjects.account.AccountLoginPageObject;
+import pageobjects.account.AccountLogoutPageObject;
+import pageobjects.account.MyAccountPageObject;
+import pageobjects.account.RegisterAccountPageObject;
 
 public class Test_002_Login extends BaseTest {
     private WebDriver driver;

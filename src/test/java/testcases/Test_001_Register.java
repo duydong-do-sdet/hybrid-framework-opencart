@@ -8,8 +8,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageobjects.AccountLogoutPageObject;
-import pageobjects.RegisterAccountPageObject;
+import pageobjects.account.AccountLogoutPageObject;
+import pageobjects.account.RegisterAccountPageObject;
 import pageobjects.YourStorePageObject;
 
 public class Test_001_Register extends BaseTest {
