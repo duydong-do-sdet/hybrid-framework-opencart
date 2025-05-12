@@ -109,7 +109,7 @@ public class Test_002_Login extends BaseTest {
     }
 
     @Test
-    public void Login_006_Valid_Password() {
+    public void Login_006_Valid_Data() {
         accountLoginPage.selectMyAccountHeaderDropdownWithOption("Login");
 
         accountLoginPage.sendKeysToEmailTextbox(emailAddress);

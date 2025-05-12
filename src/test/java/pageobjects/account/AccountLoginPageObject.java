@@ -39,4 +39,10 @@ public class AccountLoginPageObject extends AccountPageObject {
         return getElementText(driver, AccountLoginPageUI.LOGIN_WARNING_MESSAGE);
     }
 
+    @Step("Login by 'Email: {0}' 'Password: {1}'")
+    public MyAccountPageObject loginToSystem(String emailAddress, String password) {
+        sendKeysToEmailTextbox(emailAddress);
+        sendKeysToPasswordTextbox(password);
+        return clickLoginButton();
+    }
 }
