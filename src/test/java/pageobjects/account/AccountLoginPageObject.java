@@ -35,8 +35,8 @@ public class AccountLoginPageObject extends AccountPageObject {
 
     @Step("Verify login warning message")
     public String getLoginWarningMessage() {
-        waitForElementToBeVisible(driver, AccountLoginPageUI.LOGIN_WARNING_MESSAGE);
-        return getElementText(driver, AccountLoginPageUI.LOGIN_WARNING_MESSAGE);
+        waitForElementToBeVisible(driver, AccountLoginPageUI.ALERT_DANGER_MESSAGE);
+        return getElementText(driver, AccountLoginPageUI.ALERT_DANGER_MESSAGE);
     }
 
     @Step("Login by 'Email: {0}' 'Password: {1}'")
@@ -45,4 +45,16 @@ public class AccountLoginPageObject extends AccountPageObject {
         sendKeysToPasswordTextbox(password);
         return clickLoginButton();
     }
+
+    public ForgotYourPasswordPageObject clickForgottenPasswordLink() {
+        waitForElementToBeClickable(driver, AccountLoginPageUI.FORGOTTEN_PASSWORD_LINK);
+        clickElement(driver, AccountLoginPageUI.FORGOTTEN_PASSWORD_LINK);
+        return PageGeneratorManager.getForgotYourPasswordPageObject(driver);
+    }
+
+    public String getAlertSuccessMessage() {
+        waitForElementToBeVisible(driver, AccountLoginPageUI.ALERT_SUCCESS_MESSAGE);
+        return getElementText(driver, AccountLoginPageUI.ALERT_SUCCESS_MESSAGE);
+    }
+
 }

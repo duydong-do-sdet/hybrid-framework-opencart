@@ -2,10 +2,7 @@ package commons;
 
 import org.openqa.selenium.WebDriver;
 import pageobjects.*;
-import pageobjects.account.AccountLoginPageObject;
-import pageobjects.account.AccountLogoutPageObject;
-import pageobjects.account.MyAccountPageObject;
-import pageobjects.account.RegisterAccountPageObject;
+import pageobjects.account.*;
 
 public class PageGeneratorManager {
 
@@ -27,6 +24,10 @@ public class PageGeneratorManager {
 
     public static MyAccountPageObject getMyAccountPage(WebDriver driver) {
         return new MyAccountPageObject(driver);
+    }
+
+    public static ForgotYourPasswordPageObject getForgotYourPasswordPageObject(WebDriver driver) {
+        return new ForgotYourPasswordPageObject(driver);
     }
 
 }

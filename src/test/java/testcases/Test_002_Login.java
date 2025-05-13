@@ -79,7 +79,7 @@ public class Test_002_Login extends BaseTest {
 
         accountLoginPage.clickLoginButton();
 
-        Assert.assertEquals(accountLoginPage.getLoginWarningMessage(), "Warning: No customer account found!");
+        Assert.assertEquals(accountLoginPage.getLoginWarningMessage(), "Warning: The E-Mail Address was not found in our records, please try again!");
     }
 
     @Test
