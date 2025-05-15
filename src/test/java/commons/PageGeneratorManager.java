@@ -30,4 +30,8 @@ public class PageGeneratorManager {
         return new ForgotYourPasswordPageObject(driver);
     }
 
+    public static SearchPageObject getSearchPage(WebDriver driver) {
+        return new SearchPageObject(driver);
+    }
+
 }

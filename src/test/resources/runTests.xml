@@ -11,7 +11,7 @@
     <test name="FirefoxTest">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="testcases.Test_004_Forgotten_Password"/>
+            <class name="testcases.Test_005_Search"/>
         </classes>
     </test>
 

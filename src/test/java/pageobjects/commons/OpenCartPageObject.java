@@ -5,6 +5,7 @@ import commons.PageGeneratorManager;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import interfaces.commons.OpenCartPageUI;
+import pageobjects.SearchPageObject;
 
 public class OpenCartPageObject extends BasePage {
     private WebDriver driver;
@@ -27,6 +28,19 @@ public class OpenCartPageObject extends BasePage {
             default:
                 throw new RuntimeException("Invalid header option: '" + optionValue + "'");
         }
+    }
+
+    @Step("Enter '{0}' into the 'Search' textbox")
+    public void sendKeysToSearchTextbox(String value) {
+        waitForElementToBeVisible(driver, OpenCartPageUI.SEARCH_TEXTBOX);
+        sendKeysToElement(driver, OpenCartPageUI.SEARCH_TEXTBOX, value);
+    }
+
+    @Step("Click the 'Search' button")
+    public SearchPageObject clickSearchButton() {
+        waitForElementToBeVisible(driver, OpenCartPageUI.SEARCH_BUTTON);
+        clickElement(driver, OpenCartPageUI.SEARCH_BUTTON);
+        return PageGeneratorManager.getSearchPage(driver);
     }
 
 }
